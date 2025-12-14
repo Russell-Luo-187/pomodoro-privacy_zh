@@ -1,0 +1,481 @@
+<style>
+    [data-custom-class='body'], [data-custom-class='body'] * {
+            background: transparent !important;
+          }
+  [data-custom-class='title'], [data-custom-class='title'] * {
+            font-family: Arial !important;
+  font-size: 26px !important;
+  color: #000000 !important;
+          }
+  [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
+            font-family: Arial !important;
+  color: #595959 !important;
+  font-size: 14px !important;
+          }
+  [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
+            font-family: Arial !important;
+  font-size: 19px !important;
+  color: #000000 !important;
+          }
+  [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
+            font-family: Arial !important;
+  font-size: 17px !important;
+  color: #000000 !important;
+          }
+  [data-custom-class='body_text'], [data-custom-class='body_text'] * {
+            color: #595959 !important;
+  font-size: 14px !important;
+  font-family: Arial !important;
+          }
+  [data-custom-class='link'], [data-custom-class='link'] * {
+            color: #3030F1 !important;
+  font-size: 14px !important;
+  font-family: Arial !important;
+  word-break: break-word !important;
+          }
+  </style>
+        <span style="display: block;margin: 0 auto 3.125rem;width: 11.125rem;height: 2.375rem;background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzgiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAxNzggMzgiPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8cGF0aCBmaWxsPSIjRDFEMUQxIiBkPSJNNC4yODMgMjQuMTA3Yy0uNzA1IDAtMS4yNTgtLjI1Ni0xLjY2LS43NjhoLS4wODVjLjA1Ny41MDIuMDg2Ljc5Mi4wODYuODd2Mi40MzRILjk4NXYtOC42NDhoMS4zMzJsLjIzMS43NzloLjA3NmMuMzgzLS41OTQuOTUtLjg5MiAxLjcwMi0uODkyLjcxIDAgMS4yNjQuMjc0IDEuNjY1LjgyMi40MDEuNTQ4LjYwMiAxLjMwOS42MDIgMi4yODMgMCAuNjQtLjA5NCAxLjE5OC0uMjgyIDEuNjctLjE4OC40NzMtLjQ1Ni44MzMtLjgwMyAxLjA4LS4zNDcuMjQ3LS43NTYuMzctMS4yMjUuMzd6TTMuOCAxOS4xOTNjLS40MDUgMC0uNy4xMjQtLjg4Ni4zNzMtLjE4Ny4yNDktLjI4My42Ni0uMjkgMS4yMzN2LjE3N2MwIC42NDUuMDk1IDEuMTA3LjI4NyAxLjM4Ni4xOTIuMjguNDk1LjQxOS45MS40MTkuNzM0IDAgMS4xMDEtLjYwNSAxLjEwMS0xLjgxNiAwLS41OS0uMDktMS4wMzQtLjI3LTEuMzI5LS4xODItLjI5NS0uNDY1LS40NDMtLjg1Mi0uNDQzem01LjU3IDEuNzk0YzAgLjU5NC4wOTggMS4wNDQuMjkzIDEuMzQ4LjE5Ni4zMDQuNTEzLjQ1Ny45NTQuNDU3LjQzNyAwIC43NS0uMTUyLjk0Mi0uNDU0LjE5Mi0uMzAzLjI4OC0uNzUzLjI4OC0xLjM1MSAwLS41OTUtLjA5Ny0xLjA0LS4yOS0xLjMzOC0uMTk0LS4yOTctLjUxLS40NDUtLjk1LS40NDUtLjQzOCAwLS43NTMuMTQ3LS45NDYuNDQzLS4xOTQuMjk1LS4yOS43NDItLjI5IDEuMzR6bTQuMTUzIDBjMCAuOTc3LS4yNTggMS43NDItLjc3NCAyLjI5My0uNTE1LjU1Mi0xLjIzMy44MjctMi4xNTQuODI3LS41NzYgMC0xLjA4NS0uMTI2LTEuNTI1LS4zNzhhMi41MiAyLjUyIDAgMCAxLTEuMDE1LTEuMDg4Yy0uMjM3LS40NzMtLjM1NS0xLjAyNC0uMzU1LTEuNjU0IDAtLjk4MS4yNTYtMS43NDQuNzY4LTIuMjg4LjUxMi0uNTQ1IDEuMjMyLS44MTcgMi4xNi0uODE3LjU3NiAwIDEuMDg1LjEyNiAxLjUyNS4zNzYuNDQuMjUxLjc3OS42MSAxLjAxNSAxLjA4LjIzNi40NjkuMzU1IDEuMDE5LjM1NSAxLjY0OXpNMTkuNzEgMjRsLS40NjItMi4xLS42MjMtMi42NTNoLS4wMzdMMTcuNDkzIDI0SDE1LjczbC0xLjcwOC02LjAwNWgxLjYzM2wuNjkzIDIuNjU5Yy4xMS40NzYuMjI0IDEuMTMzLjMzOCAxLjk3MWguMDMyYy4wMTUtLjI3Mi4wNzctLjcwNC4xODgtMS4yOTRsLjA4Ni0uNDU3Ljc0Mi0yLjg3OWgxLjgwNGwuNzA0IDIuODc5Yy4wMTQuMDc5LjAzNy4xOTUuMDY3LjM1YTIwLjk5OCAyMC45OTggMCAwIDEgLjE2NyAxLjAwMmMuMDIzLjE2NS4wMzYuMjk5LjA0LjM5OWguMDMyYy4wMzItLjI1OC4wOS0uNjExLjE3Mi0xLjA2LjA4Mi0uNDUuMTQxLS43NTQuMTc3LS45MTFsLjcyLTIuNjU5aDEuNjA2TDIxLjQ5NCAyNGgtMS43ODN6bTcuMDg2LTQuOTUyYy0uMzQ4IDAtLjYyLjExLS44MTcuMzMtLjE5Ny4yMi0uMzEuNTMzLS4zMzguOTM3aDIuMjk5Yy0uMDA4LS40MDQtLjExMy0uNzE3LS4zMTctLjkzNy0uMjA0LS4yMi0uNDgtLjMzLS44MjctLjMzem0uMjMgNS4wNmMtLjk2NiAwLTEuNzIyLS4yNjctMi4yNjYtLjgtLjU0NC0uNTM0LS44MTYtMS4yOS0uODE2LTIuMjY3IDAtMS4wMDcuMjUxLTEuNzg1Ljc1NC0yLjMzNC41MDMtLjU1IDEuMTk5LS44MjUgMi4wODctLjgyNS44NDggMCAxLjUxLjI0MiAxLjk4Mi43MjUuNDcyLjQ4NC43MDkgMS4xNTIuNzA5IDIuMDA0di43OTVoLTMuODczYy4wMTguNDY1LjE1Ni44MjkuNDE0IDEuMDkuMjU4LjI2MS42Mi4zOTIgMS4wODUuMzkyLjM2MSAwIC43MDMtLjAzNyAxLjAyNi0uMTEzYTUuMTMzIDUuMTMzIDAgMCAwIDEuMDEtLjM2djEuMjY4Yy0uMjg3LjE0My0uNTkzLjI1LS45Mi4zMmE1Ljc5IDUuNzkgMCAwIDEtMS4xOTEuMTA0em03LjI1My02LjIyNmMuMjIyIDAgLjQwNi4wMTYuNTUzLjA0OWwtLjEyNCAxLjUzNmExLjg3NyAxLjg3NyAwIDAgMC0uNDgzLS4wNTRjLS41MjMgMC0uOTMuMTM0LTEuMjIyLjQwMy0uMjkyLjI2OC0uNDM4LjY0NC0uNDM4IDEuMTI4VjI0aC0xLjYzOHYtNi4wMDVoMS4yNGwuMjQyIDEuMDFoLjA4Yy4xODctLjMzNy40MzktLjYwOC43NTYtLjgxNGExLjg2IDEuODYgMCAwIDEgMS4wMzQtLjMwOXptNC4wMjkgMS4xNjZjLS4zNDcgMC0uNjIuMTEtLjgxNy4zMy0uMTk3LjIyLS4zMS41MzMtLjMzOC45MzdoMi4yOTljLS4wMDctLjQwNC0uMTEzLS43MTctLjMxNy0uOTM3LS4yMDQtLjIyLS40OC0uMzMtLjgyNy0uMzN6bS4yMyA1LjA2Yy0uOTY2IDAtMS43MjItLjI2Ny0yLjI2Ni0uOC0uNTQ0LS41MzQtLjgxNi0xLjI5LS44MTYtMi4yNjcgMC0xLjAwNy4yNTEtMS43ODUuNzU0LTIuMzM0LjUwNC0uNTUgMS4yLS44MjUgMi4wODctLjgyNS44NDkgMCAxLjUxLjI0MiAxLjk4Mi43MjUuNDczLjQ4NC43MDkgMS4xNTIuNzA5IDIuMDA0di43OTVoLTMuODczYy4wMTguNDY1LjE1Ni44MjkuNDE0IDEuMDkuMjU4LjI2MS42Mi4zOTIgMS4wODUuMzkyLjM2MiAwIC43MDQtLjAzNyAxLjAyNi0uMTEzYTUuMTMzIDUuMTMzIDAgMCAwIDEuMDEtLjM2djEuMjY4Yy0uMjg3LjE0My0uNTkzLjI1LS45MTkuMzJhNS43OSA1Ljc5IDAgMCAxLTEuMTkyLjEwNHptNS44MDMgMGMtLjcwNiAwLTEuMjYtLjI3NS0xLjY2My0uODIyLS40MDMtLjU0OC0uNjA0LTEuMzA3LS42MDQtMi4yNzggMC0uOTg0LjIwNS0xLjc1Mi42MTUtMi4zMDEuNDEtLjU1Ljk3NS0uODI1IDEuNjk1LS44MjUuNzU1IDAgMS4zMzIuMjk0IDEuNzI5Ljg4MWguMDU0YTYuNjk3IDYuNjk3IDAgMCAxLS4xMjQtMS4xOTh2LTEuOTIyaDEuNjQ0VjI0SDQ2LjQzbC0uMzE3LS43NzloLS4wN2MtLjM3Mi41OTEtLjk0Ljg4Ni0xLjcwMi44ODZ6bS41NzQtMS4zMDZjLjQyIDAgLjcyNi0uMTIxLjkyMS0uMzY1LjE5Ni0uMjQzLjMwMi0uNjU3LjMyLTEuMjR2LS4xNzhjMC0uNjQ0LS4xLTEuMTA2LS4yOTgtMS4zODYtLjE5OS0uMjc5LS41MjItLjQxOS0uOTctLjQxOWEuOTYyLjk2MiAwIDAgMC0uODUuNDY1Yy0uMjAzLjMxLS4zMDQuNzYtLjMwNCAxLjM1IDAgLjU5Mi4xMDIgMS4wMzUuMzA2IDEuMzMuMjA0LjI5Ni40OTYuNDQzLjg3NS40NDN6bTEwLjkyMi00LjkyYy43MDkgMCAxLjI2NC4yNzcgMS42NjUuODMuNC41NTMuNjAxIDEuMzEyLjYwMSAyLjI3NSAwIC45OTItLjIwNiAxLjc2LS42MiAyLjMwNC0uNDE0LjU0NC0uOTc3LjgxNi0xLjY5LjgxNi0uNzA1IDAtMS4yNTgtLjI1Ni0xLjY1OS0uNzY4aC0uMTEzbC0uMjc0LjY2MWgtMS4yNTF2LTguMzU3aDEuNjM4djEuOTQ0YzAgLjI0Ny0uMDIxLjY0My0uMDY0IDEuMTg3aC4wNjRjLjM4My0uNTk0Ljk1LS44OTIgMS43MDMtLjg5MnptLS41MjcgMS4zMWMtLjQwNCAwLS43LjEyNS0uODg2LjM3NC0uMTg2LjI0OS0uMjgzLjY2LS4yOSAxLjIzM3YuMTc3YzAgLjY0NS4wOTYgMS4xMDcuMjg3IDEuMzg2LjE5Mi4yOC40OTUuNDE5LjkxLjQxOS4zMzcgMCAuNjA1LS4xNTUuODA0LS40NjUuMTk5LS4zMS4yOTgtLjc2LjI5OC0xLjM1IDAtLjU5MS0uMS0xLjAzNS0uMy0xLjMzYS45NDMuOTQzIDAgMCAwLS44MjMtLjQ0M3ptMy4xODYtMS4xOTdoMS43OTRsMS4xMzQgMy4zNzljLjA5Ni4yOTMuMTYzLjY0LjE5OCAxLjA0MmguMDMzYy4wMzktLjM3LjExNi0uNzE3LjIzLTEuMDQybDEuMTEyLTMuMzc5aDEuNzU3bC0yLjU0IDYuNzczYy0uMjM0LjYyNy0uNTY2IDEuMDk2LS45OTcgMS40MDctLjQzMi4zMTItLjkzNi40NjgtMS41MTIuNDY4LS4yODMgMC0uNTYtLjAzLS44MzMtLjA5MnYtMS4zYTIuOCAyLjggMCAwIDAgLjY0NS4wN2MuMjkgMCAuNTQzLS4wODguNzYtLjI2Ni4yMTctLjE3Ny4zODYtLjQ0NC41MDgtLjgwM2wuMDk2LS4yOTUtMi4zODUtNS45NjJ6Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzMpIj4KICAgICAgICAgICAgPGNpcmNsZSBjeD0iMTkiIGN5PSIxOSIgcj0iMTkiIGZpbGw9IiNFMEUwRTAiLz4KICAgICAgICAgICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTIyLjQ3NCAxNS40NDNoNS4xNjJMMTIuNDM2IDMwLjRWMTAuMzYzaDE1LjJsLTUuMTYyIDUuMDh6Ii8+CiAgICAgICAgPC9nPgogICAgICAgIDxwYXRoIGZpbGw9IiNEMkQyRDIiIGQ9Ik0xMjEuNTQ0IDE0LjU2di0xLjcyOGg4LjI3MnYxLjcyOGgtMy4wMjRWMjRoLTIuMjR2LTkuNDRoLTMuMDA4em0xMy43NDQgOS41NjhjLTEuMjkgMC0yLjM0MS0uNDE5LTMuMTUyLTEuMjU2LS44MS0uODM3LTEuMjE2LTEuOTQ0LTEuMjE2LTMuMzJzLjQwOC0yLjQ3NyAxLjIyNC0zLjMwNGMuODE2LS44MjcgMS44NzItMS4yNCAzLjE2OC0xLjI0czIuMzYuNDAzIDMuMTkyIDEuMjA4Yy44MzIuODA1IDEuMjQ4IDEuODggMS4yNDggMy4yMjQgMCAuMzEtLjAyMS41OTctLjA2NC44NjRoLTYuNDY0Yy4wNTMuNTc2LjI2NyAxLjA0LjY0IDEuMzkyLjM3My4zNTIuODQ4LjUyOCAxLjQyNC41MjguNzc5IDAgMS4zNTUtLjMyIDEuNzI4LS45NmgyLjQzMmEzLjg5MSAzLjg5MSAwIDAgMS0xLjQ4OCAyLjA2NGMtLjczNi41MzMtMS42MjcuOC0yLjY3Mi44em0xLjQ4LTYuNjg4Yy0uNC0uMzUyLS44ODMtLjUyOC0xLjQ0OC0uNTI4cy0xLjAzNy4xNzYtMS40MTYuNTI4Yy0uMzc5LjM1Mi0uNjA1LjgyMS0uNjggMS40MDhoNC4xOTJjLS4wMzItLjU4Ny0uMjQ4LTEuMDU2LS42NDgtMS40MDh6bTcuMDE2LTIuMzA0djEuNTY4Yy41OTctMS4xMyAxLjQ2MS0xLjY5NiAyLjU5Mi0xLjY5NnYyLjMwNGgtLjU2Yy0uNjcyIDAtMS4xNzkuMTY4LTEuNTIuNTA0LS4zNDEuMzM2LS41MTIuOTE1LS41MTIgMS43MzZWMjRoLTIuMjU2di04Ljg2NGgyLjI1NnptNi40NDggMHYxLjMyOGMuNTY1LS45NyAxLjQ4My0xLjQ1NiAyLjc1Mi0xLjQ1Ni42NzIgMCAxLjI3Mi4xNTUgMS44LjQ2NC41MjguMzEuOTM2Ljc1MiAxLjIyNCAxLjMyOC4zMS0uNTU1LjczMy0uOTkyIDEuMjcyLTEuMzEyYTMuNDg4IDMuNDg4IDAgMCAxIDEuODE2LS40OGMxLjA1NiAwIDEuOTA3LjMzIDIuNTUyLjk5Mi42NDUuNjYxLjk2OCAxLjU5Ljk2OCAyLjc4NFYyNGgtMi4yNHYtNC44OTZjMC0uNjkzLS4xNzYtMS4yMjQtLjUyOC0xLjU5Mi0uMzUyLS4zNjgtLjgzMi0uNTUyLTEuNDQtLjU1MnMtMS4wOS4xODQtMS40NDguNTUyYy0uMzU3LjM2OC0uNTM2Ljg5OS0uNTM2IDEuNTkyVjI0aC0yLjI0di00Ljg5NmMwLS42OTMtLjE3Ni0xLjIyNC0uNTI4LTEuNTkyLS4zNTItLjM2OC0uODMyLS41NTItMS40NC0uNTUycy0xLjA5LjE4NC0xLjQ0OC41NTJjLS4zNTcuMzY4LS41MzYuODk5LS41MzYgMS41OTJWMjRoLTIuMjU2di04Ljg2NGgyLjI1NnpNMTY0LjkzNiAyNFYxMi4xNmgyLjI1NlYyNGgtMi4yNTZ6bTcuMDQtLjE2bC0zLjQ3Mi04LjcwNGgyLjUyOGwyLjI1NiA2LjMwNCAyLjM4NC02LjMwNGgyLjM1MmwtNS41MzYgMTMuMDU2aC0yLjM1MmwxLjg0LTQuMzUyeiIvPgogICAgPC9nPgo8L3N2Zz4K) center no-repeat;"></span>
+  
+        <div data-custom-class="body">
+        <div><strong><span style="font-size: 26px;"><span data-custom-class="title"><h1>隐私政策</h1></span></strong></div>
+        <div><span style="color: rgb(127, 127, 127);"><strong><span style="font-size: 15px;"><span data-custom-class="subtitle">最后更新：2025年12月7日</span></strong></span></div>
+        <div><br></div>
+        <div><br></div>
+        <div><br></div>
+        <div style="line-height: 1.5;">
+            <span style="color: rgb(127, 127, 127);">
+                <span style="color: rgb(89, 89, 89); font-size: 15px;">
+                    <span data-custom-class="body_text">本隐私声明适用于罗宇（个人开发者）（"<strong>我们</strong>"、"<strong>我方</strong>"或"<strong>我们的</strong>"</span>
+                    <span data-custom-class="body_text">），说明了当您使用我们的服务（"<strong>服务</strong>"）时，我们如何以及为何可能访问、收集、存储、使用和/或共享（"<strong>处理</strong>"）您的个人信息，包括当您：</span>
+                </span>
+            </span>
+        </div>
+        </li></ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;">
+                <span style="font-size: 15px; color: rgb(89, 89, 89);">
+                    <span style="font-size: 15px; color: rgb(89, 89, 89);">
+                        <span data-custom-class="body_text">下载并使用我们的移动应用程序（番茄时钟任务助手）<span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);">，</span>
+                        <span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"> 或链接到本隐私声明的任何其他应用程序</span>
+                    </span>
+                </span>
+            </li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;">
+                <span style="font-size: 15px;">使用番茄时钟任务助手。产品概述
+  番茄时钟是一款基于番茄工作法的时间管理应用，旨在帮助用户提高专注力和工作效率。通过科学的专注-休息循环，帮助培养良好的工作习惯并实现有效的时间管理。
+  核心功能
+  1. 专注计时器系统
+  标准番茄工作法：25分钟专注 + 5分钟短休息。4个专注会话后自动进入20分钟长休息。可自定义专注时长、短休息和长休息时间。实时进度显示和剩余时间。支持暂停、重置和跳过操作。
+  2. 智能任务管理
+  创建带有计划专注次数的任务。将任务分配到特定日期以进行每日目标规划。重复任务：每日、每周、每月、每年等。灵活的重复配置：按工作日、日期、周数等。任务进度跟踪：已完成专注、中断专注、计划专注。任务编辑和删除（单个实例或整个系列）。
+  3. 日历视图（高级功能）
+  直观的日历界面，用于每日任务概览。选择日期查看任务详情。日历上的视觉任务标记。长期规划和日程管理。
+  4. 数据分析（高级功能）
+  月度专注统计。已完成专注、中断专注、计划专注次数。专注完成率和专注完整率。显示月度专注分布的视觉图表。CSV导出以供进一步分析。
+  5. 多设备同步
+  基于iCloud的云同步。在所有设备上自动同步任务和统计信息。启用/禁用同步功能。数据安全存储在您的iCloud账户中。
+  6. 实时活动和通知
+  显示实时计时器状态的实时活动。专注/休息完成提醒通知。连续提醒模式（4个连续通知）。后台计时器和通知支持。
+  7. 个性化设置
+  自定义专注和休息时长。通知偏好设置。数据同步开关。应用内帮助和使用指南。
+  订阅服务
+  该应用提供免费基本功能和高级订阅服务。订阅者享受：日历视图功能、数据分析和统计、复杂重复任务配置、家庭共享支持、无限制访问所有功能。
+  技术特性
+  原生iOS应用，用户体验流畅。支持iOS 18.4及以上版本。本地数据存储以保护隐私。深色模式支持。简洁美观的界面设计。
+  使用场景
+  适合学生进行学习和作业管理，专业人士提高工作专注度，自由职业者进行时间规划，以及任何寻求提高生产力的人。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span data-custom-class="body_text"></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">以其他相关方式与我们互动，包括任何营销或活动<span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span data-custom-class="body_text"><strong>有问题或疑虑？</strong>阅读本隐私声明将帮助您了解您的隐私权利和选择。我们负责就如何处理您的个人信息做出决定。如果您不同意我们的政策和做法，请不要使用我们的服务。如果您仍有任何问题或疑虑，请通过 <a target="_blank" data-custom-class="link" href="mailto:divisionfinks@hotmail.com">divisionfinks@hotmail.com</a> 联系我们。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><strong><span style="font-size: 15px;"><span data-custom-class="heading_1"><h2>要点总结</h2></span></strong></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong><em>本摘要提供了我们隐私声明的要点，但您可以通过点击每个要点后面的链接或使用下面的</em></strong></span><a data-custom-class="link" href="#toc"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text"><strong><em>目录</em></strong></span></a><span style="font-size: 15px;"><span data-custom-class="body_text"><strong><em>来查找您要查找的部分，以了解更多详细信息。</em></strong></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们处理哪些个人信息？</strong>当您访问、使用或浏览我们的服务时，我们可能会根据您与我们和服务的互动方式、您做出的选择以及您使用的产品和功能来处理个人信息。了解更多关于</span><a data-custom-class="link" href="#personalinfo"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">您向我们披露的个人信息</span></a><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们是否处理任何敏感个人信息？</strong>某些信息在某些司法管辖区可能被视为"特殊"或"敏感"信息，例如您的种族或民族出身、性取向和宗教信仰。我们不处理敏感个人信息。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们是否从第三方收集任何信息？</strong>我们不从第三方收集任何信息。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们如何处理您的信息？</strong>我们处理您的信息以提供、改进和管理我们的服务，与您沟通，用于安全和欺诈预防，以及遵守法律。我们也可能在您同意的情况下将您的信息用于其他目的。我们只在有有效法律理由的情况下处理您的信息。了解更多关于</span><a data-custom-class="link" href="#infouse"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">我们如何处理您的信息</span></a><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们在什么情况下以及与哪些方共享个人信息？</strong>我们可能在特定情况下与特定第三方共享信息。了解更多关于</span><a data-custom-class="link" href="#whoshare"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">我们何时以及与谁共享您的个人信息</span></a><span style="font-size: 15px;"><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>我们如何保护您的信息安全？</strong>我们已经实施了适当的组织和技术流程和程序来保护您的个人信息。但是，无法保证通过互联网进行的电子传输或信息存储技术100%安全，因此我们不能承诺或保证黑客、网络犯罪分子或其他未经授权的第三方不会破坏我们的安全并不当收集、访问、窃取或修改您的信息。了解更多关于</span><a data-custom-class="link" href="#infosafe"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">我们如何保护您的信息安全</span></a><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>您有哪些权利？</strong>根据您所在的地理位置，适用的隐私法可能意味着您对您的个人信息拥有某些权利。了解更多关于</span><a data-custom-class="link" href="#privacyrights"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">您的隐私权利</span></a><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>您如何行使您的权利？</strong>行使您权利的最简单方法是提交</span><a data-custom-class="link" href="https://app.termly.io/dsar/2cc53acd-fb36-467e-8d2f-da0730ce21d5" rel="noopener noreferrer" target="_blank"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">数据主体访问请求</span></a><span style="font-size: 15px;"><span data-custom-class="body_text">，或通过联系我们。我们将根据适用的数据保护法律考虑并处理任何请求。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">想了解更多关于我们如何处理我们收集的任何信息？</span><a data-custom-class="link" href="#toc"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">查看完整的隐私声明</span></a><span style="font-size: 15px;"><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="toc" style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>目录</h2></span></strong></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#infocollect"><span style="color: rgb(0, 58, 250);">1. 我们收集哪些信息？</span></a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#infouse"><span style="color: rgb(0, 58, 250);">2. 我们如何处理您的信息？</span></a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#legalbases"><span style="color: rgb(0, 58, 250);">3. <span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);">我们依据哪些法律依据处理您的个人信息？</span></a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><a data-custom-class="link" href="#whoshare">4. 我们何时以及与谁共享您的个人信息？</a></span><span data-custom-class="body_text"></a><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"> </span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#inforetain"><span style="color: rgb(0, 58, 250);">5. 我们保留您的信息多长时间？</span></a><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#infosafe"><span style="color: rgb(0, 58, 250);">6. 我们如何保护您的信息安全？</span></a><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><a data-custom-class="link" href="#privacyrights">7. 您有哪些隐私权利？</a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#DNT"><span style="color: rgb(0, 58, 250);">8. 禁止跟踪功能的控制</span></a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#uslaws"><span style="color: rgb(0, 58, 250);">9. 美国居民是否有特定的隐私权利？</span></a></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link" href="#policyupdates"><span style="color: rgb(0, 58, 250);">10. 我们是否更新本声明？</span></a></span></div>
+        <div style="line-height: 1.5;"><a data-custom-class="link" href="#contact"><span style="color: rgb(0, 58, 250); font-size: 15px;">11. 您如何就本声明联系我们？</span></a></div>
+        <div style="line-height: 1.5;"><a data-custom-class="link" href="#request"><span style="color: rgb(0, 58, 250);">12. 您如何查看、更新或删除我们收集的数据？</span></a></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="infocollect" style="line-height: 1.5;"><span style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0); font-size: 15px;"><span style="font-size: 15px; color: rgb(0, 0, 0);"><span style="font-size: 15px; color: rgb(0, 0, 0);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>1. 我们收集哪些信息？</h2></span></strong></span><span data-custom-class="heading_2" id="personalinfo" style="color: rgb(0, 0, 0);"><span style="font-size: 15px;"><strong><h3>您向我们披露的个人信息</h3></strong></span><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong></span><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em> </em></strong><em>我们收集您向我们提供的个人信息。</em></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">当您 <span data-custom-class="body_text">表示有兴趣获取有关我们或我们的产品和服务的信息时，当您参与服务上的活动时，或当您联系我们时，我们收集您自愿向我们提供的个人信息。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div id="sensitiveinfo" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>敏感信息。</strong>我们不处理敏感信息。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>支付数据。</strong>如果您选择进行购买，我们可能会收集处理您的支付所需的数据，例如您的支付工具号码和与您的支付工具相关的安全代码。所有支付数据由<span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"> Apple<span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"> 处理和存储。您可以在此处找到他们的隐私声明链接：<span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"> <span style="color: rgb(0, 58, 250);"><a target="_blank" data-custom-class="link" href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span data-custom-class="body_text">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span data-custom-class="body_text">此应用程序中的所有应用内购买和订阅服务均通过Apple的StoreKit API处理。用户通过其Apple ID账户完成支付，所有支付信息（包括信用卡号码、支付方式等）均由Apple直接处理并安全存储。作为应用程序开发者，我们无法访问、查看或存储任何用户支付信息。所有支付交易均遵守Apple的隐私政策和服务条款。用户可以在其设备设置中管理订阅、查看购买历史，并通过Apple的退款政策处理退款请求。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"> </div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong>应用程序数据。</strong>如果您使用我们的应用程序，如果您选择向我们提供访问权限或许可，我们也可能收集以下信息：</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><em>移动设备访问。</em>我们可能会请求访问或获得您移动设备上某些功能的权限，包括您移动设备的存储和其他功能。如果您希望更改我们的访问权限或权限，可以在设备的设置中进行。</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><em>移动设备数据。</em>我们会自动收集设备信息（如您的移动设备ID、型号和制造商）、操作系统、版本信息和系统配置信息、设备和应用程序识别号码、浏览器类型和版本、硬件型号、互联网服务提供商和/或移动运营商，以及互联网协议（IP）地址（或代理服务器）。如果您使用我们的应用程序，我们还可能收集与您的移动设备相关的电话网络信息、您的移动设备的操作系统或平台、您使用的移动设备类型、您的移动设备的唯一设备ID，以及您访问的我们应用程序功能的信息。</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><em>推送通知。</em>我们可能会请求向您发送有关您的账户或应用程序某些功能的推送通知。如果您希望选择不接收这些类型的通信，可以在设备的设置中关闭它们。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">这些信息主要用于维护我们应用程序的安全和运行，用于故障排除，以及用于我们的内部分析和报告目的。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">您向我们提供的所有个人信息必须真实、完整和准确，您必须将此类个人信息的任何更改通知我们。</span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="infouse" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>2. 我们如何处理您的信息？</h2></span></strong></span><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em>我们处理您的信息以提供、改进和管理我们的服务，与您沟通，用于安全和欺诈预防，以及遵守法律。我们出于以下列出的目的处理个人信息。我们也可能仅在您事先明确同意的情况下将您的信息用于其他目的。</em></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>我们出于多种原因处理您的个人信息，具体取决于您如何与我们的服务互动，包括：</strong></span></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"></span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong>为了拯救或保护个人的重大利益。</strong>在必要时，我们可能会处理您的信息以拯救或保护个人的重大利益，例如防止伤害。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="legalbases" style="line-height: 1.5;"><strong><span style="font-size: 15px;"><span data-custom-class="heading_1"><h2>3. 我们依据哪些法律依据处理您的信息？</h2></span></strong><em><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>简而言之：</strong>我们只在认为有必要且根据适用法律有有效法律理由（即法律依据）的情况下处理您的个人信息，例如在您同意的情况下、遵守法律、向您提供服务以订立或履行我们的合同义务、保护您的权利，或实现我们的合法商业利益。</span></em></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><em><span style="font-size: 15px;"><span data-custom-class="body_text"><strong><u>如果您位于欧盟或英国，本节适用于您。</u></strong></span></em></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">《通用数据保护条例》（GDPR）和英国GDPR要求我们解释我们依据的有效法律依据以处理您的个人信息。因此，我们可能依据以下法律依据处理您的个人信息：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>同意。</strong>如果您已授予我们许可（即同意）将您的个人信息用于特定目的，我们可能会处理您的信息。您可以随时撤回您的同意。了解更多关于</span><a data-custom-class="link" href="#withdrawconsent"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">撤回您的同意</span></a><span data-custom-class="body_text">。</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong>法律义务。</strong>在我们认为有必要遵守我们的法律义务时，我们可能会处理您的信息，例如与执法机构或监管机构合作，行使或捍卫我们的合法权利，或在我们参与的诉讼中将您的信息作为证据披露。<br></span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong>重大利益。</strong>在我们认为有必要保护您的重大利益或第三方的重大利益时，我们可能会处理您的信息，例如涉及对任何人安全的潜在威胁的情况。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong><u><em>如果您位于加拿大，本节适用于您。</em></u></strong></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果您已授予我们特定许可（即明示同意）将您的个人信息用于特定目的，或在可以推断您许可的情况下（即默示同意），我们可能会处理您的信息。您可以</span><a data-custom-class="link" href="#withdrawconsent"><span data-custom-class="body_text"><span style="color: rgb(0, 58, 250); font-size: 15px;">随时撤回您的同意</span></a><span data-custom-class="body_text"><span style="font-size: 15px;">。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">在某些特殊情况下，根据适用法律，我们可能被允许在未经您同意的情况下处理您的信息，例如：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果收集明显符合个人利益且无法及时获得同意</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">用于调查和欺诈检测与预防</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">用于在满足某些条件的情况下进行商业交易</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果它包含在证人陈述中，且收集对于评估、处理或解决保险索赔是必要的</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">用于识别受伤、生病或已故人员并与近亲沟通</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果我们有合理理由相信个人曾经、正在或可能成为财务虐待的受害者</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果合理预期经同意的收集和使用会损害信息的可用性或准确性，且收集对于与调查违反协议或违反加拿大或省法律相关目的是合理的</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果披露是为了遵守传票、令状、法院命令或与提供记录相关的法院规则</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">如果它是由个人在其就业、业务或专业过程中产生的，且收集与产生信息的目的一致</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">如果收集仅用于新闻、艺术或文学目的</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">如果信息是公开可用的且由法规指定</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">我们可能为经批准的研究或统计项目披露去标识化信息，但需遵守道德监督和保密承诺</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="whoshare" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>4. 我们何时以及与谁共享您的个人信息？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em> 我们可能在本节描述的特定情况下和/或与以下第三方共享信息。</em></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">我们可能在以下情况下需要共享您的个人信息：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><strong>业务转让。</strong>在与任何合并、公司资产出售、融资或我们全部或部分业务被另一家公司收购相关或谈判期间，我们可能会共享或转让您的信息。</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;"><strong>优惠墙。</strong>我们的应用程序可能会显示第三方托管的"优惠墙"。此类优惠墙允许第三方广告商向用户提供虚拟货币、礼品或其他物品，以换取接受和完成广告优惠。此类优惠墙可能出现在我们的应用程序中，并根据某些数据（如您的地理区域或人口统计信息）向您显示。当您点击优惠墙时，您将被带到属于其他人的外部网站，并离开我们的应用程序。唯一标识符（如您的用户ID）将与优惠墙提供商共享，以防止欺诈并正确地将相关奖励记入您的账户。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="heading_1"></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="inforetain" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>5. 我们保留您的信息多长时间？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em>我们会在本隐私声明中规定的目的所需的时间内保留您的信息，除非法律另有要求。</em></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们只会在本隐私声明中规定的目的所需的时间内保留您的个人信息，除非法律要求或允许更长的保留期（例如税务、会计或其他法律要求）。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">当我们没有持续合法的业务需要处理您的个人信息时，我们将删除或匿名化此类信息，或者如果这不可能（例如，因为您的个人信息已存储在备份档案中），那么我们将安全地存储您的个人信息并将其与任何进一步处理隔离，直到可以删除为止。</div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="infosafe" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>6. 我们如何保护您的信息安全？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em>我们旨在通过组织和技术安全措施系统来保护您的个人信息。</em></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们已经实施了适当和合理的技术和组织安全措施，旨在保护我们处理的任何个人信息的安全。但是，尽管我们有保障措施并努力保护您的信息，但无法保证通过互联网进行的电子传输或信息存储技术100%安全，因此我们不能承诺或保证黑客、网络犯罪分子或其他未经授权的第三方不会破坏我们的安全并不当收集、访问、窃取或修改您的信息。尽管我们将尽力保护您的个人信息，但向我们的服务传输和从我们的服务传输个人信息是您自己的风险。您应该只在安全环境中访问服务。<span style="color: rgb(89, 89, 89); font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="privacyrights" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>7. 您有哪些隐私权利？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em> <span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span data-custom-class="body_text"><em></em></span>根据您在美国的居住州或某些地区（如欧洲经济区（EEA）、英国（UK）、瑞士和加拿大），您拥有允许您更好地访问和控制您的个人信息的权利。<span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span data-custom-class="body_text"><em></em></span> </span>根据您的国家、省或居住州，您可以随时查看、更改或终止您的账户。</em><span style="color: rgb(89, 89, 89);"></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">在某些地区（如欧洲经济区、英国、瑞士和加拿大），您根据适用的数据保护法律拥有某些权利。这些可能包括（i）请求访问并获取您的个人信息副本的权利，（ii）请求更正或删除的权利；（iii）限制处理您的个人信息的权利；（iv）如果适用，数据可携权；以及（v）不受自动化决策约束的权利。如果仅通过自动化方式做出产生法律或类似重大影响的决定，我们将通知您，解释主要因素，并提供请求人工审查的简单方法。在某些情况下，您也可能有权反对处理您的个人信息。您可以通过使用"</span><a data-custom-class="link" href="#contact"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span data-custom-class="body_text">您如何就本声明联系我们？</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">"部分中提供的联系方式联系我们来提出此类请求。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们将根据适用的数据保护法律考虑并处理任何请求。</span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"> </span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">如果您位于欧洲经济区或英国，并且您认为我们非法处理您的个人信息，您也有权向您的<span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><a data-custom-class="link" href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" rel="noopener noreferrer" target="_blank"><span style="font-size: 15px;">成员国数据保护机构</span></a></span>或</span><a data-custom-class="link" href="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/" rel="noopener noreferrer" target="_blank"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span data-custom-class="body_text">英国数据保护机构</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">投诉。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">如果您位于瑞士，您可以联系 <span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><span style="color: rgb(0, 58, 250); font-size: 15px;"><a data-custom-class="link" href="https://www.edoeb.admin.ch/edoeb/en/home.html" rel="noopener noreferrer" target="_blank">联邦数据保护和信息专员</a></span>。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="withdrawconsent" style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong><u>撤回您的同意：</u></strong>如果我们依赖您的同意来处理您的个人信息（根据适用法律，可能是明示和/或默示同意），您有权随时撤回您的同意。您可以随时通过使用"</span><a data-custom-class="link" href="#contact"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span data-custom-class="body_text">您如何就本声明联系我们？</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">"部分中提供的联系方式联系我们来撤回您的同意。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">但是，请注意，这不会影响撤回之前的处理的合法性，也不会在适用法律允许的情况下影响基于同意以外的合法处理依据进行的您的个人信息处理。</span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text"><span style="font-size: 15px;">如果您对您的隐私权利有疑问或意见，您可以通过电子邮件联系我们：<a target="_blank" data-custom-class="link" href="mailto:divisionfinks@hotmail.com">divisionfinks@hotmail.com</a>。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="DNT" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>8. 禁止跟踪功能的控制</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">大多数网络浏览器以及一些移动操作系统和移动应用程序都包含一个"禁止跟踪"（"DNT"）功能或设置，您可以激活它来表示您的隐私偏好，即不希望监控和收集有关您在线浏览活动的数据。目前，还没有最终确定用于识别和实施DNT信号的统一技术标准。因此，我们目前不响应DNT浏览器信号或任何其他自动传达您选择不被在线跟踪的机制。如果将来采用我们必须遵循的在线跟踪标准，我们将在本隐私声明的修订版本中告知您该做法。</span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><br></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">加利福尼亚州法律要求我们告知您我们如何响应网络浏览器DNT信号。由于目前没有识别或遵守DNT信号的行业或法律标准，我们目前不响应这些信号。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="uslaws" style="line-height: 1.5;">
+            <span style="color: rgb(127, 127, 127);">
+                <span style="color: rgb(89, 89, 89); font-size: 15px;">
+                    <span style="font-size: 15px; color: rgb(89, 89, 89);">
+                        <span id="control" style="color: rgb(0, 0, 0);">
+                            <strong>
+                                <span data-custom-class="heading_1">
+                                    <h2>9. 美国居民是否有特定的隐私权利？</h2>
+                                </span>
+                            </strong>
+                        </span>
+                        <span style="font-size: 15px; color: rgb(89, 89, 89);">
+                            <span data-custom-class="body_text"><strong><em>简而言之：</em></strong><em>如果您是加利福尼亚州、科罗拉多州、康涅狄格州、特拉华州、佛罗里达州、印第安纳州、爱荷华州、肯塔基州、马里兰州、明尼苏达州、蒙大拿州、内布拉斯加州、新罕布什尔州、新泽西州、俄勒冈州、罗德岛州、田纳西州、德克萨斯州、犹他州或弗吉尼亚州的居民，您可能有权请求访问并接收我们维护的关于您的个人信息以及我们如何处理它的详细信息，更正不准确之处，获取副本或删除您的个人信息。您也可能有权撤回对我们处理您个人信息的同意。这些权利在某些情况下可能受到适用法律的限制。更多信息如下。</em></span><strong><span data-custom-class="heading_2"><h3>我们收集的个人信息类别</h3></span></strong><span data-custom-class="body_text">下表显示了过去十二（12）个月我们收集的个人信息类别。该表包括每个类别的说明性示例，并不反映我们从您那里收集的个人信息。有关我们处理的所有个人信息的完整清单，请参阅"</span><a data-custom-class="link" href="#infocollect"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span data-custom-class="body_text"><span data-custom-class="link">我们收集哪些信息？</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">"部分</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <table style="width: 100%;"><thead><tr><th style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; text-align: left;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>类别</strong></span></th><th style="width: 51.4385%; border-top: 1px solid black; border-right: 1px solid black; text-align: left;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>示例</strong></span></th><th style="width: 14.9084%; border-right: 1px solid black; border-top: 1px solid black; text-align: center; text-align: left;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>已收集</strong></span></th></tr></thead><tbody><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">A. 标识符</span></div>
+        </td><td style="width: 51.4385%; border-top: 1px solid black; border-right: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">联系方式，如真实姓名、别名、邮政地址、电话或移动联系电话、唯一个人标识符、在线标识符、互联网协议地址、电子邮件地址和账户名称</span></div>
+        </td><td style="width: 14.9084%; text-align: center; vertical-align: middle; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr></tbody></table>
+        <table style="width: 100%;"><tbody><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">B. 加利福尼亚州客户记录法规中定义的个人信息</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">姓名、联系信息、教育、就业、就业历史和财务信息</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr></tbody></table>
+        <table style="width: 100%;"><tbody><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">C. 州或联邦法律规定的受保护分类特征</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">性别、年龄、出生日期、种族和民族、国籍、婚姻状况和其他人口统计数据</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">D. 商业信息</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">交易信息、购买历史、财务详情和支付信息</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">E. 生物识别信息</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">指纹和声纹</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">F. 互联网或其他类似网络活动</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">浏览历史、搜索历史、在线行为、兴趣数据，以及与我们和其他网站、应用程序、系统和广告的互动</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">G. 地理位置数据</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">设备位置</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">H. 音频、电子、感官或类似信息</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">与我们的业务活动相关的图像和音频、视频或通话录音</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="width: 33.8274%; border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">I. 专业或就业相关信息</span></div>
+        </td><td style="width: 51.4385%; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">商业联系方式，以便在商业层面向您提供我们的服务，或如果您向我们申请工作，则包括职位、工作历史和专业资格</span></div>
+        </td><td style="width: 14.9084%; text-align: center; border-right: 1px solid black; border-top: 1px solid black;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; width: 33.8274%;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">J. 教育信息</span></div>
+        </td><td style="border-right: 1px solid black; border-top: 1px solid black; width: 51.4385%;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">学生记录和目录信息</span></div>
+        </td><td style="text-align: center; border-right: 1px solid black; border-top: 1px solid black; width: 14.9084%;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="border-width: 1px; border-color: black; border-style: solid; width: 33.8274%;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">K. 从收集的个人信息中得出的推断</span></div>
+        </td><td style="border-bottom: 1px solid black; border-top: 1px solid black; border-right: 1px solid black; width: 51.4385%;">
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">从上述任何收集的个人信息中得出的推断，用于创建个人档案或摘要，例如个人的偏好和特征</span></div>
+        </td><td style="text-align: center; border-right: 1px solid black; border-bottom: 1px solid black; border-top: 1px solid black; width: 14.9084%;">
+        <div style="line-height: 1.5;"><br></div>
+        <div data-custom-class="body_text" style="line-height: 1.5;"><span data-custom-class="body_text">否<span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><br></div>
+        </td></tr><tr><td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; line-height: 1.5;"><span data-custom-class="body_text">L. 敏感个人信息</span></td><td style="border-right: 1px solid black; border-bottom: 1px solid black; line-height: 1.5;"></td><td style="border-right: 1px solid black; border-bottom: 1px solid black;"><div data-empty="true" style="text-align: center;"><br></div>
+        <div data-custom-class="body_text" data-empty="true" style="text-align: center; line-height: 1.5;"><span data-custom-class="body_text">否</span></div>
+        <div data-empty="true" style="text-align: center;"><br></div>
+        </td></tr></tbody></table>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">我们还可能通过您亲自、在线或通过电话或邮件与我们互动的情况收集这些类别之外的其他个人信息，包括：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">通过我们的客户支持渠道获得帮助；</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text"><span style="font-size: 15px;">参与客户调查或竞赛；以及</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text"><span style="font-size: 15px;">促进我们服务的交付并回应您的询问。</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><strong><span style="font-size: 15px;"><span data-custom-class="heading_2"><h3>个人信息的来源</h3></span></strong><span style="font-size: 15px;"><span data-custom-class="body_text">了解更多关于我们收集的个人信息来源，请参阅"</span><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><a data-custom-class="link" href="#infocollect"><span style="color: rgb (0, 58, 250); font-size: 15px;">我们收集哪些信息？</span></a></span><span style="font-size: 15px;"><span data-custom-class="body_text">"</span><span style="font-size: 15px; color: rgb(89, 89, 89);"><strong><span data-custom-class="heading_2"><h3>我们如何使用和共享个人信息</h3></span></strong></span><span data-custom-class="body_text" style="font-size: 15px;">了解更多关于我们如何使用您的个人信息，请参阅"</span><a data-custom-class="link" href="#infouse"><span style="color: rgb(0, 58, 250); font-size: 15px;">我们如何处理您的信息？</span></a><span data-custom-class="body_text" style="font-size: 15px;">"部分</span><span data-custom-class="body_text" style="font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><strong>您的信息会与他人共享吗？</strong></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们可能根据我们与每个服务提供商之间的书面合同向我们的服务提供商披露您的个人信息。了解更多关于我们如何披露个人信息，请参阅"</span><a data-custom-class="link" href="#whoshare"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span style="font-size: 15px; color: rgb(0, 58, 250);">我们何时以及与谁共享您的个人信息？</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">"部分</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们可能将您的个人信息用于我们自己的商业目的，例如进行技术开发和演示的内部研究。这不被视为"出售"您的个人信息。<span style="color: rgb(89, 89, 89); font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">在过去十二（12）个月中，我们未出于商业或商业目的向第三方披露、出售或共享任何个人信息。我们<span style="color: rgb(89, 89, 89);"> </span>将来不会出售或共享属于网站访问者、用户和其他消费者的个人信息。<span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span data-custom-class="body_text"><span style="color: rgb(0, 0, 0);"></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><strong><span data-custom-class="heading_2"><h3>您的权利</h3></span></strong><span data-custom-class="body_text">根据某些美国州数据保护法律，您拥有权利。但是，这些权利不是绝对的，在某些情况下，我们可能会在法律允许的情况下拒绝您的请求。这些权利包括：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>知情权</strong>，了解我们是否正在处理您的个人数据</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>访问权</strong>，访问您的个人数据</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>更正权</strong>，更正您个人数据中的不准确之处</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>请求删除权</strong>，请求删除您的个人数据</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>获取副本权</strong>，获取您之前与我们共享的个人数据副本</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>不受歧视权</strong>，在行使您的权利时不受歧视</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;"><strong>选择退出权</strong>，如果您的个人数据用于定向广告（或根据加利福尼亚州隐私法定义的共享）、个人数据销售，或用于推进产生法律或类似重大影响的决策的画像（"画像"），则选择退出处理您的个人数据</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">根据您居住的州，您还可能拥有以下权利：</span></div>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">访问正在处理的个人数据类别的权利（根据适用法律允许，包括明尼苏达州的隐私法）</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">获取我们已披露个人数据的第三方类别列表的权利（根据适用法律允许，包括加利福尼亚州、特拉华州和马里兰州的隐私法）</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">获取我们已披露个人数据的具体第三方列表的权利（根据适用法律允许，包括明尼苏达州和俄勒冈州的隐私法）</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5; font-size: 15px;">获取我们已出售个人数据的第三方列表的权利（根据适用法律允许，包括康涅狄格州的隐私法）</li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">审查、理解、质疑并根据您居住地更正个人数据如何被画像的权利（根据适用法律允许，包括康涅狄格州和明尼苏达州的隐私法）</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">限制使用和披露敏感个人数据的权利（根据适用法律允许，包括加利福尼亚州的隐私法）</span></li>
+        </ul>
+        <ul>
+            <li data-custom-class="body_text" style="line-height: 1.5;"><span style="font-size: 15px;">选择退出收集敏感数据以及通过语音或面部识别功能操作收集的个人数据的权利（根据适用法律允许，包括佛罗里达州的隐私法）</span></li>
+        </ul>
+        <div style="line-height: 1.5;"><strong><span style="font-size: 15px;"><span data-custom-class="heading_2"><h3>如何行使您的权利</h3></span></strong><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">要行使这些权利，您可以通过提交</span><a data-custom-class="link" href="https://app.termly.io/dsar/2cc53acd-fb36-467e-8d2f-da0730ce21d5" rel="noopener noreferrer" target="_blank"><span style="font-size: 15px; color: rgb(0, 58, 250);"><span style="font-size: 15px; color: rgb(0, 58, 250);">数据主体访问请求</span></a><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">、通过电子邮件联系我们 <a target="_blank" data-custom-class="link" href="mailto:divisionfinks@hotmail.com">divisionfinks@hotmail.com</a>，</span><span data-custom-class="body_text"></span><span data-custom-class="body_text">或参考本文档底部的联系方式。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">根据某些美国州数据保护法律，您可以指定授权代理代表您提出请求。如果授权代理未提交证明其已根据适用法律有效授权代表您行事的证据，我们可能会拒绝该请求。</span> <br><strong><span data-custom-class="heading_2"><h3>请求验证</h3></span></strong><span data-custom-class="body_text">收到您的请求后，我们需要验证您的身份，以确定您是我们系统中拥有信息的同一个人。我们只会使用您请求中提供的个人信息来验证您的身份或提出请求的权限。但是，如果我们无法从我们已经维护的信息中验证您的身份，我们可能会要求您提供额外信息，以用于验证您的身份以及用于安全或欺诈预防目的。</span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><br></span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">如果您通过授权代理提交请求，我们可能需要收集额外信息以在处理您的请求之前验证您的身份，代理需要提供您书面签署的许可，以代表您提交此类请求。</span><span style="font-size: 15px;"><span data-custom-class="heading_2"><strong><h3>申诉</h3></strong></span><span data-custom-class="body_text">根据某些美国州数据保护法律，如果我们拒绝就您的请求采取行动，您可以通过电子邮件向我们申诉我们的决定：<a target="_blank" data-custom-class="link" href="mailto:divisionfinks@hotmail.com">divisionfinks@hotmail.com</a>。我们将以书面形式告知您针对申诉采取或未采取的任何行动，包括对决定原因的书面解释。如果您的申诉被拒绝，您可以向您所在州的检察长提交投诉。</span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span style="color: rgb(89, 89, 89); font-size: 15px;"></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span data-custom-class="body_text"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="policyupdates" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>10. 我们是否更新本声明？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><em><strong>简而言之：</strong>是的，我们将根据需要更新本声明，以保持与相关法律的合规性。</em></span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">我们可能会不时更新本隐私声明。更新版本将在本隐私声明顶部的"修订"日期中注明。如果我们对本隐私声明进行重大更改，我们可能会通过显著发布此类更改的通知或直接向您发送通知来通知您。我们鼓励您经常查看本隐私声明，以了解我们如何保护您的信息。</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="contact" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>11. 您如何就本声明联系我们？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">如果您对本声明有疑问或意见，您可以<span style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text">通过电子邮件联系我们 <a target="_blank" data-custom-class="link" href="mailto:divisionfinks@hotmail.com">divisionfinks@hotmail.com</a>，或</span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">通过邮寄方式联系我们：</span></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text">罗宇（个人开发者）</span><span data-custom-class="body_text"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">Lane 58, Lvxiao Road<span style="color: rgb(89, 89, 89);"></div>
+        <div style="line-height: 1.5;"><span data-custom-class="body_text" style="font-size: 15px;">Room 801, Building 9<span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">Shanghai<span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;">, Shanghai 201203</span></div>
+        <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text"><span style="font-size: 15px;"><span data-custom-class="body_text">China<span style="font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span data-custom-class="body_text"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span style="font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span style="font-size: 15px;"><span data-custom-class="body_text"><span style="color: rgb(89, 89, 89); font-size: 15px;"></div>
+        <div style="line-height: 1.5;"><br></div>
+        <div id="request" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span style="color: rgb(89, 89, 89); font-size: 15px;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control" style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1"><h2>12. 您如何查看、更新或删除我们收集的数据？</h2></span></strong></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">根据您所在国家或在美国的居住州适用的法律，您可能有权请求访问我们从您那里收集的个人信息、我们如何处理它的详细信息、更正不准确之处或删除您的个人信息。您也可能有权撤回对我们处理您个人信息的同意。这些权利在某些情况下可能受到适用法律的限制。要请求查看、更新或删除您的个人信息，请填写并提交</span><span style="color: rgb(0, 58, 250);"><span data-custom-class="body_text"><span style="color: rgb(0, 58, 250); font-size: 15px;"><a data-custom-class="link" href="https://app.termly.io/dsar/2cc53acd-fb36-467e-8d2f-da0730ce21d5" rel="noopener noreferrer" target="_blank">数据主体访问请求</a></span><span data-custom-class="body_text">。</span><div style="display: none;"><a class="privacy123" href="https://app.termly.io/dsar/2cc53acd-fb36-467e-8d2f-da0730ce21d5"></a></div>
+        </div>
+        <style>
+        ul {
+          list-style-type: square;
+        }
+        ul > li > ul {
+          list-style-type: circle;
+        }
+        ul > li > ul > li > ul {
+          list-style-type: square;
+        }
+        ol li {
+          font-family: Arial ;
+        }
+      </style>
+        </div>
+        
